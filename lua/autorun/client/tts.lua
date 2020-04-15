@@ -3,7 +3,7 @@ net.Receive( "SayTTS",  function()
 	local ply = net.ReadEntity()
 	text = string.sub( string.Replace( text, " ", "%20" ), 1, 100 )
 	
-	sound.PlayURL( "http://translate.google.com/translate_tts?tl=en&q=" .. text, "3d", function( sound )
+	sound.PlayURL( "https://tetyys.com/SAPI4/SAPI4?voice=Sam&pitch=100&speed=150&text=" .. text, "3d", function( sound )
 		if IsValid( sound ) then
 			sound:SetPos( ply:GetPos() )
 			sound:SetVolume( 1 )
